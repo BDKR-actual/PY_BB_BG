@@ -64,8 +64,10 @@ def process_config_file(config_dset):
 def determine_processor(arg_set, config_set):
     # Setup
     proc    = ''
+    wmaker_list     = ['windowmaker', 'wmsetbg', 'blackbox', 'fluxbox']
+    nitrogen_list   = ['nitrogen', 'cinnamon']
 
-    # Let's get that data
+    # Let's get the config data
     if len(arg_set['c']) > 0:
         proc = arg_set['c']
     elif len(config_set['c']) > 0:
@@ -73,10 +75,13 @@ def determine_processor(arg_set, config_set):
     else:
         proc = DEFAULT_BG_PROCESSOR
 
-    # Just in case
-    if proc == 'wmsetbg' or proc == 'blackbox' or proc == 'fluxbox':
+    # Narrow our options
+    if proc in wmaker_list:
         proc = 'windowmaker'
+    elif proc in nitrogen_list:
+        proc = 'cinnamon'
 
+    print(proc)
     return proc
 
 
