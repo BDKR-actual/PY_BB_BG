@@ -13,6 +13,7 @@ import plasma
 import windowmaker
 
 DEFAULT_IMG_DIR = '~/Downloads/safe_bgs/'
+DEFAULT_INTERVAL= 45
 
 def main():
     # Setup
@@ -20,7 +21,7 @@ def main():
     arg_set     = {"i":"", "t":"", "c":"", "d":""}
     config_set  = {"t":"", "c":"", "d":""}
     processor   = ""
-    interval    = 45                                        # A default
+    interval    = DEFAULT_INTERVAL                           # A default
 
     # Now time for real work
     bbbg_utility.process_options(arg_set)
