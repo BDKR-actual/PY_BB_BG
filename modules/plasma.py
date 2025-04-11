@@ -13,4 +13,4 @@ def rotate_images(img_list, interval):
 
 
 def set_bkg(img_proper):
-	os.system('wmsetbg --maxscale '+img_proper)
+	os.system("wmsetbg --maxscale '" + img_proper + "'")

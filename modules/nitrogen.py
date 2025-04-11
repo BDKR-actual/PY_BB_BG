@@ -13,5 +13,5 @@ def rotate_images(img_list, interval):
 
 
 def set_bkg(img_proper):
-	os.system('nitrogen --set-zoom --head=0 '+img_proper)
-	os.system('nitrogen --set-zoom --head=1 '+img_proper)
+	os.system("nitrogen --set-zoom --head=0 '" + img_proper + "'")
+	os.system("nitrogen --set-zoom --head=1 '" + img_proper + "'")
